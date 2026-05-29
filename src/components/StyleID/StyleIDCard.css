@@ -1,0 +1,169 @@
+.style-id-card {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  border: 2px solid var(--accent-border);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.card-header {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  color: var(--text-h);
+  font-weight: 700;
+}
+
+.persona {
+  margin: 0;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+.tag.vibe-tag {
+  background: rgba(102, 126, 234, 0.15);
+}
+
+.tag.occasion-tag {
+  background: rgba(192, 132, 252, 0.15);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-h);
+  width: fit-content;
+}
+
+.badge.fit-badge {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: var(--accent-border);
+}
+
+.badge.budget-badge {
+  background: rgba(170, 59, 255, 0.1);
+  border-color: var(--accent-border);
+}
+
+.colour-dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.colour-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-h);
+  cursor: help;
+}
+
+.colour-chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+@media (max-width: 768px) {
+  .style-id-card {
+    padding: 1.5rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .persona {
+    font-size: 0.9rem;
+  }
+}
