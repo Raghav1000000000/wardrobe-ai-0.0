@@ -1,0 +1,162 @@
+.outfit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.outfit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.outfit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.outfit-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+  flex: 1;
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-left: 8px;
+  transition: all 0.2s;
+}
+
+.btn-save:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.outfit-items {
+  margin-bottom: 12px;
+}
+
+.outfit-items h4 {
+  margin: 0 0 6px;
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.outfit-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.outfit-items li {
+  padding: 4px 0;
+  font-size: 13px;
+  color: #444;
+  border-left: 3px solid #667eea;
+  padding-left: 8px;
+}
+
+.outfit-reasoning {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.outfit-reasoning p {
+  margin: 0;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.outfit-reasoning strong {
+  color: #222;
+}
+
+.outfit-vibe {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.vibe-tag,
+.occasion-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.occasion-tag {
+  background: #667eea;
+}
+
+.outfit-tips {
+  background: #f0f4ff;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border-left: 3px solid #667eea;
+}
+
+.outfit-tips p {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+  line-height: 1.4;
+}
+
+.outfit-tips strong {
+  color: #667eea;
+}
+
+.outfit-confidence {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.outfit-confidence strong {
+  color: #222;
+  margin-right: 4px;
+}
+
+@media (max-width: 480px) {
+  .outfit-card {
+    padding: 12px;
+  }
+
+  .outfit-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-save {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+}

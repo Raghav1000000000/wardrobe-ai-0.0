@@ -1,0 +1,231 @@
+.today-page {
+  max-width: 1200px;
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+  color: #222;
+}
+
+.page-header p {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.error-message {
+  background: #fee;
+  color: #c33;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  border-left: 4px solid #c33;
+  font-size: 13px;
+}
+
+.onboarding-prompt {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  color: #999;
+}
+
+.prompt-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.onboarding-prompt h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #666;
+}
+
+.onboarding-prompt p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+.today-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.tab {
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: #667eea;
+}
+
+.tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tab-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls-section {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.weather-input {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.weather-input label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+}
+
+.weather-input input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+
+.weather-input input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.btn-generate {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-generate:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn-generate:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-clear-chat {
+  align-self: flex-start;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #f5f5f5;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-clear-chat:hover {
+  background: #efefef;
+  border-color: #bbb;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 24px;
+  }
+
+  .today-tabs {
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .controls-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .weather-input {
+    min-width: auto;
+  }
+
+  .btn-generate {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 20px;
+  }
+
+  .today-tabs {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .controls-section {
+    padding: 12px;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,38 @@
+.outfit-section {
+  margin-bottom: 32px;
+}
+
+.outfit-section-title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  color: #222;
+}
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.outfit-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-icon {
+  font-size: 56px;
+  margin-bottom: 12px;
+}
+
+.outfit-empty p {
+  margin: 0;
+  font-size: 14px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .outfit-grid {
+    grid-template-columns: 1fr;
+  }
+}
