@@ -1,0 +1,183 @@
+/* Skeleton Loading States */
+
+@keyframes skeleton-pulse {
+  0% {
+    background-color: rgba(170, 59, 255, 0.08);
+  }
+  50% {
+    background-color: rgba(170, 59, 255, 0.15);
+  }
+  100% {
+    background-color: rgba(170, 59, 255, 0.08);
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(170, 59, 255, 0.08) 0%,
+    rgba(170, 59, 255, 0.15) 20%,
+    rgba(170, 59, 255, 0.08) 40%
+  );
+  background-size: 1000px 100%;
+  animation: skeleton-shimmer 2s infinite;
+  border-radius: 8px;
+}
+
+/* Card Skeleton */
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 160px;
+}
+
+.skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skeleton-title {
+  height: 16px;
+  width: 80%;
+}
+
+.skeleton-text {
+  height: 12px;
+  width: 100%;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+/* Wardrobe Item Skeleton */
+.skeleton-wardrobe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.skeleton-photo {
+  width: 100%;
+  height: 140px;
+}
+
+/* Outfit Card Skeleton */
+.skeleton-outfit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+}
+
+.skeleton-outfit-image {
+  width: 100%;
+  height: 180px;
+}
+
+.skeleton-outfit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.skeleton-button {
+  flex: 1;
+  height: 36px;
+}
+
+/* Product Skeleton */
+.skeleton-product {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+}
+
+.skeleton-product-image {
+  width: 100%;
+  height: 160px;
+}
+
+.skeleton-product-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Skeleton Grid Layouts */
+.skeleton-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.skeleton-grid-card {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.skeleton-grid-wardrobe {
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.skeleton-grid-outfit {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.skeleton-grid-product {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+/* Pulse Animation Variant */
+.skeleton-pulse {
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .skeleton-grid-card {
+    grid-template-columns: 1fr;
+  }
+
+  .skeleton-grid-wardrobe {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .skeleton-grid-outfit {
+    grid-template-columns: 1fr;
+  }
+
+  .skeleton-grid-product {
+    grid-template-columns: 1fr;
+  }
+}

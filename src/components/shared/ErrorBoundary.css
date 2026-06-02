@@ -1,0 +1,194 @@
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(255, 255, 255) 100%);
+  padding: 20px;
+}
+
+.error-boundary-content {
+  max-width: 600px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  box-shadow: 0 12px 40px rgba(255, 107, 107, 0.1);
+  text-align: center;
+  animation: error-slide-in 0.4s ease-out;
+}
+
+@keyframes error-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  animation: error-bounce 0.6s ease-out;
+}
+
+@keyframes error-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.error-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b6b;
+  margin: 0 0 12px 0;
+}
+
+.error-description {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+.error-details {
+  margin: 24px 0;
+  text-align: left;
+  background: rgba(255, 107, 107, 0.05);
+  border: 1px solid rgba(255, 107, 107, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.error-details summary {
+  font-weight: 600;
+  color: #ff6b6b;
+  margin-bottom: 12px;
+  user-select: none;
+}
+
+.error-details:open summary {
+  margin-bottom: 16px;
+}
+
+.error-stack {
+  overflow: auto;
+  max-height: 300px;
+}
+
+.error-stack h3 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  word-break: break-word;
+}
+
+.error-stack pre {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  line-height: 1.4;
+}
+
+.error-warning {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 165, 0, 0.05) 100%);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 8px;
+  color: #ffa500;
+  font-size: 14px;
+  margin: 24px 0;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.error-button.primary {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff5252 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+
+.error-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+}
+
+.error-button.primary:active {
+  transform: translateY(0);
+}
+
+.error-button.secondary {
+  background: rgba(170, 59, 255, 0.1);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.error-button.secondary:hover {
+  background: rgba(170, 59, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.error-button.secondary:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+  .error-boundary {
+    padding: 16px;
+  }
+
+  .error-boundary-content {
+    padding: 24px;
+  }
+
+  .error-icon {
+    font-size: 48px;
+  }
+
+  .error-title {
+    font-size: 24px;
+  }
+
+  .error-description {
+    font-size: 14px;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-button {
+    width: 100%;
+  }
+}

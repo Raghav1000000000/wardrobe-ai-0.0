@@ -1,0 +1,325 @@
+/* Global Animations and Transitions */
+
+/* Page transitions */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button interactions */
+@keyframes button-press {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glow animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(170, 59, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(170, 59, 255, 0);
+  }
+}
+
+/* Chip selection animation */
+@keyframes chip-select {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Smooth color transition for interactive elements */
+@keyframes color-transition {
+  from {
+    color: var(--text-secondary);
+  }
+  to {
+    color: var(--text-primary);
+  }
+}
+
+/* Modal fade-in */
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal slide-in */
+@keyframes modal-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Backdrop blur effect */
+@keyframes backdrop-blur-in {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(8px);
+  }
+}
+
+/* Success checkmark animation */
+@keyframes checkmark-draw {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Ripple effect for buttons */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Smooth height expansion */
+@keyframes expand-height {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+/* Smooth width expansion */
+@keyframes expand-width {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: auto;
+    opacity: 1;
+  }
+}
+
+/* Page container animations */
+.page-enter {
+  animation: fade-in 0.3s ease-out;
+}
+
+.page-exit {
+  animation: fade-in 0.3s ease-in reverse;
+}
+
+/* Card hover animations */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(170, 59, 255, 0.15);
+}
+
+/* Smooth state changes */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fast {
+  transition: all 0.15s ease-out;
+}
+
+.transition-slow {
+  transition: all 0.6s ease-out;
+}
+
+/* Smooth opacity transitions */
+.fade-enter {
+  animation: fade-in 0.3s ease-out;
+}
+
+.fade-enter-active {
+  animation: fade-in 0.3s ease-out;
+}
+
+.fade-exit {
+  animation: fade-in 0.2s ease-in reverse;
+}
+
+.fade-exit-active {
+  animation: fade-in 0.2s ease-in reverse;
+}
+
+/* Disabled state animations */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Loading spinner animation */
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Utility classes */
+.animate-slide-up {
+  animation: slide-in-up 0.4s ease-out;
+}
+
+.animate-slide-down {
+  animation: slide-in-down 0.4s ease-out;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.3s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-out;
+}
+
+/* Smooth state transitions */
+.state-change {
+  transition: all 0.2s ease-out;
+}
+
+/* Responsive animation adjustments */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

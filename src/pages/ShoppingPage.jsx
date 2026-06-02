@@ -6,7 +6,7 @@ import GapAnalysis from '../components/Shopping/GapAnalysis';
 import ProductRecommendations from '../components/Shopping/ProductRecommendations';
 import './ShoppingPage.css';
 
-function ShopPage() {
+const ShoppingPage = () => {
   const { profile } = useProfile();
   const { wardrobe } = useWardrobe();
   const { gaps, recommendations, loading, error, analyzeGaps, getRecommendations, clearRecommendations } = useShopping(profile, wardrobe);
@@ -103,6 +103,6 @@ function ShopPage() {
       </div>
     </div>
   );
-}
+};
 
-export default ShopPage;
+export default ShoppingPage;
